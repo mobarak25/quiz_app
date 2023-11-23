@@ -1,0 +1,73 @@
+name: quiz_app
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+6
+
+environment:
+  sdk: ">=3.0.5 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+
+  easy_localization: ^3.0.0
+  flutter_bloc: ^8.1.3
+  equatable: ^2.0.5
+  get_it: ^7.6.0
+  injectable: ^2.1.2
+  http: ^1.1.0
+  get_storage: ^2.1.1
+  image_picker: ^1.0.2
+  internet_connection_checker: ^1.0.0+1
+  location: ^5.0.0
+  geocoding: ^2.1.0
+  cached_network_image: ^3.2.3
+  device_info_plus: ^9.0.2
+  in_app_update: ^4.0.1
+  firebase_crashlytics: ^3.3.4
+  firebase_core: ^2.15.0
+  in_app_review: ^2.0.6
+  package_info_plus: ^4.0.2
+  connectivity_plus: ^4.0.1
+  flutter_dotenv: ^5.1.0
+  flutter_svg: ^2.0.7
+  change_app_package_name: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  flutter_launcher_icons: ^0.12.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/icon.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - lib/core/translations/
+    - .env
+    - .env.profile
+    - .env.release
+
+  fonts:
+    - family: montserrat
+      fonts:
+        - asset: assets/fonts/montserrat/montserrat-regular.ttf
+        - asset: assets/fonts/montserrat/montserrat-light.ttf
+          weight: 300
+        - asset: assets/fonts/montserrat/montserrat-medium.ttf
+          weight: 500
+        - asset: assets/fonts/montserrat/montserrat-semibold.ttf
+          weight: 600
+        - asset: assets/fonts/montserrat/montserrat-bold.ttf
+          weight: 700
