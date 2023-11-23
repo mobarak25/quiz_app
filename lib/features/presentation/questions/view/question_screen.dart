@@ -5,7 +5,6 @@ import 'package:quiz_app/core/navigator/iflutter_navigator.dart';
 import 'package:quiz_app/core/utils/colors.dart';
 import 'package:quiz_app/core/utils/text_styles.dart';
 import 'package:quiz_app/core/widgets/body.dart';
-import 'package:quiz_app/core/widgets/button.dart';
 import 'package:quiz_app/core/widgets/network_image.dart';
 import 'package:quiz_app/core/widgets/text.dart';
 import 'package:quiz_app/features/domain/repositories/api_repo.dart';
