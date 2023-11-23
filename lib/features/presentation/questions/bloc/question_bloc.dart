@@ -29,6 +29,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
   final ApiRepo _apiRepo;
   final LocalStorageRepo _localStorageRepo;
 
+// Fetch API Questions
   FutureOr<void> _getQuestions(
       GetQuestions event, Emitter<QuestionState> emit) async {
     final questionResponse =
@@ -44,6 +45,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     emit(state.copyWith(topScore: int.parse(highScore!)));
   }
 
+// Formate for Single Question
   FutureOr<void> _getSingleQuestion(
       GetSingleQuestion event, Emitter<QuestionState> emit) {
     if (state.currentQustionNo < state.questionList.questions!.length) {
@@ -66,6 +68,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     }
   }
 
+// Code For Correct Answer
   FutureOr<void> _getCorrectAns(
       GetCorrectAns event, Emitter<QuestionState> emit) {
     emit(state.copyWith(clickedValue: event.isCorrect));
@@ -91,6 +94,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     });
   }
 
+// Code For Next Questions
   FutureOr<void> _nextQuestion(
       NextQuestion event, Emitter<QuestionState> emit) async {
     if (state.currentQustionNo < state.questionList.questions!.length - 1) {
@@ -111,10 +115,9 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     }
   }
 
+// Code For Progress bar
   FutureOr<void> _increaseProgress(
       IncreaseProgress event, Emitter<QuestionState> emit) {
     emit(state.copyWith(progressParsentage: state.progressParsentage + 0.111));
-
-    print(state.progressParsentage);
   }
 }
